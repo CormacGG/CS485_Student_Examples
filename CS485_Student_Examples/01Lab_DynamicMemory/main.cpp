@@ -39,14 +39,25 @@ int main ()
   // TODO:
   PacString *pcDynString;
 
+  pcDynString = new PacString ("CS485");
   // dynamically allocate the PacString object using
   // pcDynString.
+
   // Assign "CS485" to pcDynString.
+
+  std::cout << "pcDynString: " << *pcDynString << std::endl;
+
   // Display pcDynString.
   // concatenate " is the best!" on to
+
+  *pcDynString += " is the best!";
+
   // pcDynString
   // Display pcDynString.
+  std::cout << "pcDynString: " << *pcDynString << std::endl;
+
   // deallocate the object pcDynString 
+  delete pcDynString;
 
   return EXIT_SUCCESS;
 }
