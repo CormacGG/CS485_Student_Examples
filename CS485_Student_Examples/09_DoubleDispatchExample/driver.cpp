@@ -12,7 +12,7 @@
 #include "DoubleBonusGiver.h"
 #include <iostream>
 
-#include "vld.h"
+//#include "vld.h"
 
 //***************************************************************************
 // Function:    main
@@ -56,13 +56,13 @@ int main ()
 
   std::cout << "\nrcEmp = cMang; rcBonusGiver = cDblBonusGiver;";
   std::cout <<" rcBonusGiver.giveBonus (rcEmp); \n";
-  rcBonusGiver.giveBonus (rcEmp);
+  rcBonusGiver.giveBonus (rcEmp); // Employee&
 
   // double dispatch
 
   std::cout << "\nDouble Dispatch";
   std::cout << "\nrcEmp.getBonus (rcBonusGiver);\n";
-  rcEmp.getBonus (rcBonusGiver);
+  rcEmp.getBonus (rcBonusGiver); // Manager&
   std::cout << "\n\n";
 
   return EXIT_SUCCESS;
